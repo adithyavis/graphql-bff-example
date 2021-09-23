@@ -31,7 +31,18 @@ function App() {
   return (
     <div className="App">
       <div className="d-flex justify-content-center">
-        <div className="d-flex flex-column align-items-center">
+        <div
+          className="d-flex flex-column align-items-center"
+          style={{ width: "min(100vw, 500px)" }}
+        >
+          <h1>GraphQL as BFF</h1>
+          <h4>
+            The GraphQL BFF acts as a middleman that aggregates country data
+            from multiple external API endpoints and cleans them before passing
+            it to the client. We prevent overfetching at the BFF layer by
+            skipping to fetch from the external API endpoints who's data the
+            user doesn't require.
+          </h4>
           <CountryDropdown country={country} setCountry={setCountry} />
           <FieldsFilters
             isCitiesRequired={isCitiesRequired}

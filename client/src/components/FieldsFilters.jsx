@@ -31,6 +31,7 @@ export default function FieldsFilters({
 }) {
   return (
     <div className="d-flex justify-content-center align-items-center p-2 w-100">
+      <div>Required Data: </div>
       <Checkbox
         name={"Capital"}
         checked={isCapitalRequired}
