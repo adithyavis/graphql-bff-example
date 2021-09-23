@@ -3,6 +3,7 @@ import { useLazyQuery } from "@apollo/client";
 import gql from "graphql-tag";
 
 import Button from "react-bootstrap/Button";
+import ReactJson from "react-json-view";
 import CountryDropdown from "./components/CountryDropdown";
 import FieldsFilters from "./components/FieldsFilters";
 
@@ -51,6 +52,17 @@ function App() {
           >
             Get country details
           </Button>
+          {data && data.getCountry && (
+            <ReactJson
+              src={data.getCountry}
+              theme="monokai"
+              iconStyle="triangle"
+              collapsed={1}
+              collapseStringsAfterLength={10}
+              enableClipboard={false}
+              style={{ width: "100%" }}
+            />
+          )}
         </div>
       </div>
     </div>
