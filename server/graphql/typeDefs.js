@@ -3,6 +3,10 @@ const { gql } = require("apollo-server");
 module.exports = gql`
   type Country {
     name: String!
+    id: String!
+    iso2Code: String!
+    longitude: String
+    latitude: String
     cities: [String]
     capital: String
     news: [News]
