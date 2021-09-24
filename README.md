@@ -10,7 +10,7 @@ I wanted to build a sample graphql application to demonstrate the usage of the g
 
 BFFs are built separately for different client device types. There can be different BFFs for desktop devices, mobile devices etc. This way, different clients can query for data specifically optimized to their device type.
 
-I have built a generic BFF that can be dynamically queried. I have used the @skip directive to generate dynamic graphql queries on the frontend. I have also optimized the graphql resolvers to not wastefully call any external API endpoint, if the client query doesn't need any data from them. This way, I have reduced overfetching at the BFF layer too.
+I have built only one generic BFF in this demo- this demo can be extended to multiple BFFs too. Also, I have optimized the application by reducing graphql overfetching. I have used the @skip directive to generate dynamic graphql queries on the frontend. I have also optimized the graphql resolvers to not wastefully call any external API endpoint, if the client query doesn't need any data from them.
 
 ![Architecture](https://raw.githubusercontent.com/adithyavis/graphql-bff-example/main/architecture.png)
 
